@@ -164,7 +164,7 @@ namespace SistemPakarProject
             string difficulty;
             if (high >= 2) difficulty = "HARD (Dragon)";
             else if (medium >= 2) difficulty = "NORMAL (Golem)";
-            else if (high == 1 && medium == 1 && low == 1) difficulty = "Normal (Golem)";
+            else if (high == 1 && medium == 1 && low == 1) difficulty = "NORMAL (Golem)";
             else difficulty = "EASY (Goblin)";
 
             Console.WriteLine("Selected Difficulty : " + difficulty);
