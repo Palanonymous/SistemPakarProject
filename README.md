@@ -344,19 +344,19 @@ Helper untuk membatasi nilai integer agar tidak keluar dari rentang [min, max].
 
 --- Input Dungeon 1 ---
 Level Player (1-10): 3
-Mulai dengan HP (1-100): 80
+Mulai dengan HP (1-100): 20
 Potion Used (0-5): 1
 Clear Time (menit, 0-30+): 12
 Jumlah Respawn (0-6+): 0
 
 Dungeon 1 Summary:
  Win: True
- HP Score     : 77.8%     ← HP rendah dianggap lebih baik (rumus invers)
+ HP Score     : 80.8%     ← HP rendah dianggap lebih baik (rumus invers)
  Potion Score : 80.0%
  Time Score   : 90.0%
  Death Score  : 100.0%
  Level Score  : 77.8%
- Performance  : 85.1% -> High
+ Performance  : 85.7% -> High
  CF           : 0.80
 
 --- Input Dungeon 2 ---
@@ -385,12 +385,12 @@ Jumlah Respawn (0-6+): 1
 
 Dungeon 3 Summary:
  Win: True
- HP Score     : 39.4%
+ HP Score     : 40.4%
  Potion Score : 60.0%
  Time Score   : 75.0%
  Death Score  : 83.3%
  Level Score  : 55.6%
- Performance  : 62.7% -> Medium
+ Performance  : 62.9% -> Medium
  CF           : 0.60
 
 === FINAL DECISION ===
