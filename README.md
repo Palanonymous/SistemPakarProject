@@ -422,6 +422,9 @@ Below is the complete source code with detailed comments explaining each importa
 ```csharp
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SistemPakarProject
 {
@@ -481,10 +484,10 @@ namespace SistemPakarProject
                 d.Potion = ReadIntRange("Potion Used (0-5): ", 0, 5);
 
                 // Clear Time: ≤10 menit = ideal, >30 menit = dianggap kalah (Win=false)
-                d.ClearTime = ReadIntRange("Clear Time (menit, 0-1000): ", 0, 1000);
+                d.ClearTime = ReadIntRange("Clear Time (menit, 0-30+): ", 0, 1000);
 
                 // Death/Respawn: 0 = terbaik, >6 = dianggap kalah (Win=false)
-                d.Death = ReadIntRange("Jumlah Respawn (0-1000): ", 0, 1000);
+                d.Death = ReadIntRange("Jumlah Respawn (0-6+): ", 0, 1000);
 
                 // -------------------------------------------------------
                 // FORWARD CHAINING PHASE 2: Terapkan aturan Win/Lose
@@ -539,16 +542,10 @@ namespace SistemPakarProject
                 // Coba parse input sebagai integer
                 if (int.TryParse(s, out int v))
                 {
-                    // Validasi apakah nilai berada dalam rentang yang diizinkan
-                    if (v < minAllowed || v > maxAllowed)
-                    {
-                        Console.WriteLine($"Masukkan angka antara {minAllowed} dan {maxAllowed}.");
-                        continue; // Minta input ulang
-                    }
                     return v; // Input valid, kembalikan nilainya
                 }
 
-                // Input bukan angka sama sekali
+                // Input salah
                 Console.WriteLine("Input tidak valid, masukkan angka.");
             }
         }
@@ -624,7 +621,6 @@ namespace SistemPakarProject
             // Rule R2: PerformancePercent ≥ 80 → High   (CF = 0.80)
             // Rule R3: PerformancePercent ≥ 60 → Medium (CF = 0.60)
             // Rule R4: PerformancePercent  < 60 → Low    (CF = 0.40)
-            d.Category = "";
             if (d.PerformancePercent >= 80.0)
             {
                 d.Category = "High";
