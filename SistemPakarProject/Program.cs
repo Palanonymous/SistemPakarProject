@@ -41,7 +41,7 @@ namespace SistemPakarProject
                 d.HP = ReadIntRange("Mulai dengan HP (1-100): ", 1, 100);
                 d.Potion = ReadIntRange("Potion Used (0-5): ", 0, 5);
                 d.ClearTime = ReadIntRange("Clear Time (0-30 menit): ", 0, 1000); // >30 akan mark lose
-                d.Death = ReadIntRange("Jumlah Respawn (0-6 Respawn) : ", 0, 1000);            // >6 akan mark lose
+                d.Death = ReadIntRange("Jumlah Respawn (0-6 Respawn): ", 0, 1000);            // >6 akan mark lose
 
 
                 EvaluateWin(d);
