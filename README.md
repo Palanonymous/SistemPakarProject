@@ -49,7 +49,7 @@ This program is an Expert System simulation that mimics how a game expert evalua
 ```
 SistemPakarProject/
 │
-├── SistemPakarProject.sln       # Solution file Visual Studio
+├── SistemPakarProject.slnx      # Solution file Visual Studio
 │
 └── SistemPakarProject/
     ├── Program.cs               # Entry point + semua logika utama
@@ -75,7 +75,7 @@ SistemPakarProject/
 
 ### Menggunakan Visual Studio
 
-1. Buka file `SistemPakarProject.sln`
+1. Buka file `SistemPakarProject.slnx`
 2. Tekan `F5` atau klik tombol ▶ Start
 3. Program akan berjalan di jendela Console
 
@@ -346,8 +346,8 @@ Helper untuk membatasi nilai integer agar tidak keluar dari rentang [min, max].
 Level Player (1-10): 3
 Mulai dengan HP (1-100): 20
 Potion Used (0-5): 1
-Clear Time (menit, 0-30+): 12
-Jumlah Respawn (0-6+): 0
+Clear Time (0-30 menit): 12
+Jumlah Respawn (0-6 Respawn): 0
 
 Dungeon 1 Summary:
  Win: True
@@ -363,8 +363,8 @@ Dungeon 1 Summary:
 Level Player (1-10): 7
 Mulai dengan HP (1-100): 40
 Potion Used (0-5): 3
-Clear Time (menit, 0-30+): 20
-Jumlah Respawn (0-6+): 2
+Clear Time (0-30 menit): 20
+Jumlah Respawn (0-6 Respawn): 2
 
 Dungeon 2 Summary:
  Win: True
@@ -380,8 +380,8 @@ Dungeon 2 Summary:
 Level Player (1-10): 5
 Mulai dengan HP (1-100): 60
 Potion Used (0-5): 2
-Clear Time (menit, 0-30+): 15
-Jumlah Respawn (0-6+): 1
+Clear Time (0-30 menit): 15
+Jumlah Respawn (0-6 Respawn): 1
 
 Dungeon 3 Summary:
  Win: True
@@ -484,10 +484,10 @@ namespace SistemPakarProject
                 d.Potion = ReadIntRange("Potion Used (0-5): ", 0, 5);
 
                 // Clear Time: ≤10 menit = ideal, >30 menit = dianggap kalah (Win=false)
-                d.ClearTime = ReadIntRange("Clear Time (menit, 0-30+): ", 0, 1000);
+                d.ClearTime = ReadIntRange("Clear Time (0-30 menit): ", 0, 1000);
 
                 // Death/Respawn: 0 = terbaik, >6 = dianggap kalah (Win=false)
-                d.Death = ReadIntRange("Jumlah Respawn (0-6+): ", 0, 1000);
+                d.Death = ReadIntRange("Jumlah Respawn (0-6 Respawn): ", 0, 1000);
 
                 // -------------------------------------------------------
                 // FORWARD CHAINING PHASE 2: Terapkan aturan Win/Lose
