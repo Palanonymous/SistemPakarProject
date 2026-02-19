@@ -363,8 +363,8 @@ Dungeon 1 Summary:
 Level Player (1-10): 7
 Mulai dengan HP (1-100): 40
 Potion Used (0-5): 3
-Clear Time (menit, 0-1000): 20
-Jumlah Respawn (0-1000): 2
+Clear Time (menit, 0-30+): 20
+Jumlah Respawn (0-6+): 2
 
 Dungeon 2 Summary:
  Win: True
@@ -380,8 +380,8 @@ Dungeon 2 Summary:
 Level Player (1-10): 5
 Mulai dengan HP (1-100): 60
 Potion Used (0-5): 2
-Clear Time (menit, 0-1000): 15
-Jumlah Respawn (0-1000): 1
+Clear Time (menit, 0-30+): 15
+Jumlah Respawn (0-6+): 1
 
 Dungeon 3 Summary:
  Win: True
